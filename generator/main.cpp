@@ -1,15 +1,19 @@
 #include <iostream>
+#include "generator.h"
+
 
 using namespace std;
 int main()
 {
-    int edad = 0;
-    cout << "Hola, ingresa tu edaD:";
-    cin >> edad;
-    cout << "Tu edad es:" << edad;
+    string comando;
 
     cout << "Bienvenido al generador de archivos binarios,\n";
-    cout << "";
+    cout << "Para crear tu archivo usa: $> generator -size <SIZE> -output <OUTPUT FILE PATH> \n";
+    getline(cin, comando);
+    cout << comando;
+
+    Generator generator;
+    generator.parseCommand(comando);
 
     return 0;
 }

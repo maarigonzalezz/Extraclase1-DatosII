@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/gonza/CLionProjects/generator/cmake-build-debug"
+			"value" : "c:/Users/gonza/OneDrive - Estudiantes ITCR/Extraclase1-DatosII/generator/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/gonza/CLionProjects/generator/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/gonza/OneDrive - Estudiantes ITCR/Extraclase1-DatosII/generator/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/gonza/CLionProjects/generator"
+			"value" : "C:/Users/gonza/OneDrive - Estudiantes ITCR/Extraclase1-DatosII/generator"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -687,7 +687,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/JetBrains/CLion 2024.1.4/bin/ninja/win/x64/ninja.exe"
+			"value" : "C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/ninja/win/x64/ninja.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -1291,7 +1291,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/gonza/CLionProjects/generator/cmake-build-debug"
+			"value" : "C:/Users/gonza/OneDrive - Estudiantes ITCR/Extraclase1-DatosII/generator/cmake-build-debug"
 		},
 		{
 			"name" : "generator_IS_TOP_LEVEL",
@@ -1315,7 +1315,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/gonza/CLionProjects/generator"
+			"value" : "C:/Users/gonza/OneDrive - Estudiantes ITCR/Extraclase1-DatosII/generator"
 		}
 	],
 	"kind" : "cache",

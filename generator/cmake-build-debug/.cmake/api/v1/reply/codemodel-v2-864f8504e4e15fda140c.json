@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "generator::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-generator-Debug-45d1f4aac99e80e9c680.json",
+					"jsonFile" : "target-generator-Debug-3b40ddfa80330c0a8cb2.json",
 					"name" : "generator",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/gonza/CLionProjects/generator/cmake-build-debug",
-		"source" : "C:/Users/gonza/CLionProjects/generator"
+		"build" : "C:/Users/gonza/OneDrive - Estudiantes ITCR/Extraclase1-DatosII/generator/cmake-build-debug",
+		"source" : "C:/Users/gonza/OneDrive - Estudiantes ITCR/Extraclase1-DatosII/generator"
 	},
 	"version" : 
 	{

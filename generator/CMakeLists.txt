@@ -3,4 +3,5 @@ project(generator)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(generator main.cpp)
+add_executable(generator main.cpp
+        generator.h)

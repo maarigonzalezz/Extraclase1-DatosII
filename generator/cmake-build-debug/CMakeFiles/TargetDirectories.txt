@@ -1,3 +1,3 @@
-C:/Users/gonza/CLionProjects/generator/cmake-build-debug/CMakeFiles/generator.dir
-C:/Users/gonza/CLionProjects/generator/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/gonza/CLionProjects/generator/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/gonza/OneDrive - Estudiantes ITCR/Extraclase1-DatosII/generator/cmake-build-debug/CMakeFiles/generator.dir
+C:/Users/gonza/OneDrive - Estudiantes ITCR/Extraclase1-DatosII/generator/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/gonza/OneDrive - Estudiantes ITCR/Extraclase1-DatosII/generator/cmake-build-debug/CMakeFiles/rebuild_cache.dir

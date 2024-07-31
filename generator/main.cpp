@@ -12,6 +12,7 @@ int main()
     getline(cin, comando);
 
     Generator generator;
-    generator.auxiliar("SMALL","C://Users//gonza//OneDrive - Estudiantes ITCR" );
+    //generator.auxiliar("SMALL","C://Users//gonza//OneDrive - Estudiantes ITCR" );
+    generator.parseCommand(comando);
     return 0;
 }

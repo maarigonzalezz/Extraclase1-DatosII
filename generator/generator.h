@@ -17,16 +17,15 @@ private:
 
     const int smallSize = 512 * 1024 * 1024; // 512 MB
     const int mediumSize = 1024 * 1024 * 1024; // 1 GB
-    const int largeSize = 2 * 1024 * 1024 * 1024; // 2 GB
+    const long long largeSize = 2LL * 1024 * 1024 * 1024; // 2 GB
 
-    int nums[16] = {0b0000, 0b0001, 0b0010, 0b0011, 0b0100, 0b0101, 0b0110, 0b0111,
-                    0b1000, 0b1001, 0b1010, 0b1011, 0b1100, 0b1101, 0b1110, 0b1111};
 
-    void filegenerator(const string& size, const string& outputFile) {
+
+    void filegenerator(const string& size, const string& outputFile) const {
         cout << "alo";
         random_device rd;
         mt19937 gen(rd());
-        uniform_int_distribution<> dis(0, 15);
+        uniform_int_distribution<> dis(0, numeric_limits<int>::max());
 
         const char* path = outputFile.c_str();
 
@@ -38,7 +37,7 @@ private:
 
         ofstream file("test.bin", ios::binary);
 
-        int a = 0;
+        long long a = 0;
         if (size == "SMALL") {
             a = smallSize / 4;
         } else if (size == "MEDIUM") {
@@ -50,11 +49,12 @@ private:
             return;
         }
 
-        for (int i = 0; i < a; ++i) {
-            int p = nums[dis(gen)];
+        for (long long i = 0; i < a; ++i) {
+            int p = dis(gen);
             file.write(reinterpret_cast<char*>(&p), 4);
         }
 
+        cout << "listovv";
         file.close();
     }
 
@@ -75,15 +75,27 @@ public:
     }
 
     void parseCommand(const string& command) {
-        size_t sizeStart = command.find("<") + 1;
-        size_t sizeEnd = command.find(">");
-        size = command.substr(sizeStart, sizeEnd - sizeStart);
-        cout<< size<< endl;
+        istringstream iss(command);
+        string token;
+        vector<std::string> tokens;
 
-        size_t outputFileStart = command.find("<", sizeEnd) + 1;
-        size_t outputFileEnd = command.find(">", outputFileStart);
-        outputFile = command.substr(outputFileStart, outputFileEnd - outputFileStart);
-        cout<< outputFile;
+        while (iss >> token) {
+            tokens.push_back(token);
+        }
+
+        // Recorremos los tokens para encontrar -size y -output
+        for (size_t i = 0; i < tokens.size(); ++i) {
+            if (tokens[i] == "-size" && i + 1 < tokens.size()) {
+                size = tokens[i + 1];
+            }
+            if (tokens[i] == "-output" && i + 1 < tokens.size()) {
+                outputFile = tokens[i + 1];
+                for (size_t j = i + 2; j < tokens.size(); ++j) {
+                    outputFile += " " + tokens[j];
+                }
+                break; // Ya encontramos y procesamos el output, podemos salir del bucle
+            }
+        }
 
         filegenerator(size, outputFile);
     }

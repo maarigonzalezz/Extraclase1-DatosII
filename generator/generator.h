@@ -6,6 +6,8 @@
 #include <string>
 #include <sstream>
 #include <random>
+#include <direct.h> // para _chdir
+#include <cerrno>   // para errno
 
 using namespace std;
 
@@ -25,6 +27,15 @@ private:
         random_device rd;
         mt19937 gen(rd());
         uniform_int_distribution<> dis(0, 15);
+
+        const char* path = outputFile.c_str();
+
+        if (_chdir(path) == 0) {
+            std::cout << "Directorio cambiado exitosamente a: " << path << std::endl;
+        } else {
+            std::cerr << "Error al cambiar de directorio: " << strerror(errno) << std::endl;
+        }
+
         ofstream file("test.bin", ios::binary);
 
         int a = 0;
@@ -64,54 +75,24 @@ public:
     }
 
     void parseCommand(const string& command) {
-        istringstream stream(command);
-        string token;
-        string size;
-        string outputFile;
+        size_t sizeStart = command.find("<") + 1;
+        size_t sizeEnd = command.find(">");
+        size = command.substr(sizeStart, sizeEnd - sizeStart);
+        cout<< size<< endl;
 
-        while (stream >> token) {
-            if (token == "-size") {
-                stream >> token;
-                size = extractValue(token);
-                cout << "Size: " << size << endl;
-            } else if (token == "-output") {
-                stream >> token;
-                outputFile = extractValue(token);
-                cout << "Output File: " << outputFile << endl;
-            }
-        }
+        size_t outputFileStart = command.find("<", sizeEnd) + 1;
+        size_t outputFileEnd = command.find(">", outputFileStart);
+        outputFile = command.substr(outputFileStart, outputFileEnd - outputFileStart);
+        cout<< outputFile;
 
-        // Trim spaces from extracted values
-        size = trim(size);
-        outputFile = trim(outputFile);
-
-        if (!size.empty() && !outputFile.empty()) {
-            filegenerator(size, outputFile);
-            cout << "llego aquu";
-        } else {
-            cerr << "Error: Invalid size or output file." << endl;
-        }
+        filegenerator(size, outputFile);
     }
 
-    static string extractValue(const string& token) {
-        size_t start = token.find('<');
-        size_t end = token.find('>');
-
-        if (start != string::npos && end != string::npos && start < end) {
-            return token.substr(start + 1, end - start - 1);
-        } else {
-            return "";
-        }
+    void auxiliar(const string& s, const string& j)
+    {
+        filegenerator(s,j);
     }
 
-    static string trim(const string& str) {
-        size_t start = str.find_first_not_of(' ');
-        size_t end = str.find_last_not_of(' ');
-
-        if (start == string::npos) return ""; // no content
-
-        return str.substr(start, end - start + 1);
-    }
 };
 
 

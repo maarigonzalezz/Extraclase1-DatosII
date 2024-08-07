@@ -61,6 +61,18 @@ build CMakeFiles/sorter.dir/PagedArray.cpp.obj: CXX_COMPILER__sorter_unscanned_D
   OBJECT_DIR = CMakeFiles\sorter.dir
   OBJECT_FILE_DIR = CMakeFiles\sorter.dir
 
+build CMakeFiles/sorter.dir/Parser.cpp.obj: CXX_COMPILER__sorter_unscanned_Debug C$:/Users/gonza/OneDrive$ -$ Estudiantes$ ITCR/Extraclase1-DatosII/sorter/Parser.cpp || cmake_object_order_depends_target_sorter
+  DEP_FILE = CMakeFiles\sorter.dir\Parser.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\sorter.dir
+  OBJECT_FILE_DIR = CMakeFiles\sorter.dir
+
+build CMakeFiles/sorter.dir/Page.cpp.obj: CXX_COMPILER__sorter_unscanned_Debug C$:/Users/gonza/OneDrive$ -$ Estudiantes$ ITCR/Extraclase1-DatosII/sorter/Page.cpp || cmake_object_order_depends_target_sorter
+  DEP_FILE = CMakeFiles\sorter.dir\Page.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\sorter.dir
+  OBJECT_FILE_DIR = CMakeFiles\sorter.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target sorter
@@ -69,7 +81,7 @@ build CMakeFiles/sorter.dir/PagedArray.cpp.obj: CXX_COMPILER__sorter_unscanned_D
 #############################################
 # Link the executable sorter.exe
 
-build sorter.exe: CXX_EXECUTABLE_LINKER__sorter_Debug CMakeFiles/sorter.dir/main.cpp.obj CMakeFiles/sorter.dir/PagedArray.cpp.obj
+build sorter.exe: CXX_EXECUTABLE_LINKER__sorter_Debug CMakeFiles/sorter.dir/main.cpp.obj CMakeFiles/sorter.dir/PagedArray.cpp.obj CMakeFiles/sorter.dir/Parser.cpp.obj CMakeFiles/sorter.dir/Page.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\sorter.dir

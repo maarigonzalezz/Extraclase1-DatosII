@@ -6,4 +6,9 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(sorter main.cpp
         main.cpp
         PagedArray.cpp
-        PagedArray.h)
+        PagedArray.h
+        Sorters.h
+        Parser.cpp
+        Parser.h
+        Page.cpp
+        Page.h)
